@@ -1,0 +1,12 @@
+<button (click)="reset()">Reset</button>
+
+<form [formGroup]="form">
+  <div formGroupName="array">
+    <span
+      *ngFor="let item of arrayItems; let i = index"
+      [formGroupName]="i"
+    >
+      <input type="text" formControlName="someValue" />
+    </span>
+  </div>
+</form>
